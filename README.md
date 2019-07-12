@@ -1,15 +1,11 @@
-# challenge[5] CSV to table
+# Setup
 
-http://codecorgi.co/challenge/5/csv-to-table
+1. Run Node server: 
 
-Code for the challenge[5] on the code corgi platform
+```bash
+$ node server.js
+```
 
-Request a CSV file and add its data to the table
+2. Open http://localhost:3000 in browser.
 
-The CSV file `data/customers.csv` will return customer information in this
-order:
-
-ID, First Name, Last Name, Email, Job Title, City
-
-For every row in the CSV and column add that data to the table.
-
+3. Enjoy!

@@ -1,0 +1,19 @@
+{
+  "name": "5-csv-to-table",
+  "version": "1.0.0",
+  "description": "http://codecorgi.co/challenge/5/csv-to-table",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihollander/5-csv-to-table.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ihollander/5-csv-to-table/issues"
+  },
+  "homepage": "https://github.com/ihollander/5-csv-to-table#readme"
+}
