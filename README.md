@@ -3,7 +3,7 @@
 1. Run Node server: 
 
 ```bash
-$ node server.js
+$ npm start
 ```
 
 2. Open http://localhost:3000 in browser.

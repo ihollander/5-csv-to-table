@@ -1,31 +1,32 @@
-(() => {
-  const getCsv = async url => {
-    const result = await fetch(url);
-    const csv = await result.text();
-    return csv;
-  };
+import SplitString from "./csv.js";
 
-  const arrayToTr = array => {
-    const tr = document.createElement("tr");
-    array.forEach(value => {
-      const th = document.createElement("th");
-      th.textContent = value;
-      tr.appendChild(th);
-    });
-    return tr;
+(() => {
+  const getText = async url => {
+    const response = await fetch(url);
+    return await response.text();
   };
 
   const init = async () => {
     const table = document.querySelector("table");
 
-    const csv = await getCsv("http://localhost:3000/data/customers.csv");
+    const text = await getText("/data/customers.csv");
 
-    const csvArray = csv.split("\n");
+    // I know this could be done with an array, just wanted to get some practice with DIY iterators
+    const csv = new SplitString(text, "\n");
 
-    csvArray.forEach(row => {
-      const tr = arrayToTr(row.split(","));
+    for (let row of csv) {
+      const tr = document.createElement("tr");
+
+      const cells = new SplitString(row, ",");
+
+      for (let cell of cells) {
+        const th = document.createElement("th");
+        th.textContent = cell;
+        tr.appendChild(th);
+      }
+
       table.appendChild(tr);
-    });
+    }
   };
   init();
 })();

@@ -3,7 +3,7 @@ const fs = require("fs");
 const url = require("url");
 const path = require("path");
 
-// minimal code for known files
+// known MIME types
 const getMimeType = pathName => {
   switch (path.extname(pathName)) {
     case ".html":
