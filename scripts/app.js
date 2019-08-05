@@ -1,4 +1,4 @@
-import SplitString from "./csv.js";
+import SplitString from "./SplitString.js/index.js";
 
 (() => {
   const getText = async url => {
