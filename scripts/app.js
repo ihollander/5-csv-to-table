@@ -16,12 +16,12 @@ import SplitString from "./csv.js";
     // I know this could be done with an array, just wanted to get some practice with DIY iterators
     const csv = new SplitString(text, "\n");
 
-    for (let row of csv) {
+    for (let row of csv.items()) {
       const tr = document.createElement("tr");
 
       const cells = new SplitString(row, ",");
 
-      for (let cell of cells) {
+      for (let cell of cells.items()) {
         const th = document.createElement("th");
         th.textContent = cell;
         tr.appendChild(th);

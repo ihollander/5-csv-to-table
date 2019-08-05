@@ -15,8 +15,17 @@ class SplitString {
     return nextIndex;
   }
 
+  // using hand-crafted™️ iterator
   [Symbol.iterator]() {
     return new SplitStringIterator(this);
+  }
+
+  // with a generator fn
+  *items(startIndex = 0) {
+    while (startIndex < this.text.length) {
+      yield this.readLine(startIndex);
+      startIndex = this.getEndIndex(startIndex) + 1;
+    }
   }
 }
 

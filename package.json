@@ -4,7 +4,7 @@
   "description": "http://codecorgi.co/challenge/5/csv-to-table",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "dev": "node server.js"
   },
   "repository": {
     "type": "git",
