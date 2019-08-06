@@ -9,7 +9,7 @@ import SplitString from "./SplitString.js";
   const init = async () => {
     const table = document.querySelector("table");
 
-    const text = await getText("/data/customers.csv");
+    const text = await getText("data/customers.csv");
 
     // I know this could be done with an array, just wanted to get some practice with DIY iterators
     const csv = new SplitString(text, "\n");
